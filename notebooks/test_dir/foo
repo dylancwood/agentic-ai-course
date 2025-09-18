@@ -1,0 +1,19 @@
+def fibonacci(n):
+    """
+    Generate a list containing the Fibonacci sequence up to n terms.
+
+    Args:
+        n (int): Number of terms in the sequence.
+
+    Returns:
+        list: Fibonacci sequence as a list.
+    """
+    if n <= 0:
+        return []
+    sequence = [0]
+    if n == 1:
+        return sequence
+    sequence.append(1)
+    for i in range(2, n):
+        sequence.append(sequence[-1] + sequence[-2])
+    return sequence
